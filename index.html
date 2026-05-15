@@ -33,7 +33,7 @@
             padding: 0 48px;
         }
 
-        /* Header */
+        /* Header (sem mudanças, apenas ajuste de cor) */
         .header {
             position: fixed;
             top: 0;
@@ -164,7 +164,7 @@
             color: #6B1D2D;
         }
 
-        /* Sobre - duas colunas */
+        /* Sobre - sem caixas pesadas, mais fluido */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -175,12 +175,20 @@
             color: #C0C0C0;
             line-height: 1.8;
             font-size: 18px;
+            transition: all 0.3s ease;
+            padding: 8px;
         }
 
         .objective-box {
-            background: #1A0A10;
+            background: rgba(26, 10, 16, 0.6);
             border-left: 4px solid #6B1D2D;
             padding: 28px;
+            transition: all 0.3s ease;
+        }
+
+        .objective-box:hover {
+            background: rgba(26, 10, 16, 0.9);
+            border-left-width: 6px;
         }
 
         .objective-label {
@@ -193,13 +201,7 @@
             text-transform: uppercase;
         }
 
-        .objective-box p {
-            color: #E0E0E0;
-            line-height: 1.7;
-            font-size: 17px;
-        }
-
-        /* Trajetória - duas colunas alinhadas */
+        /* Trajetória - duas colunas, sem caixas externas */
         .trajetoria-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -208,11 +210,7 @@
         }
 
         .trajetoria-col {
-            background: #0D0D0D;
-            border-radius: 20px;
-            padding: 32px;
-            border: 1px solid #2A2A2A;
-            height: 100%;
+            transition: all 0.3s ease;
         }
 
         .trajetoria-col h3 {
@@ -226,21 +224,27 @@
             padding-bottom: 8px;
         }
 
-        .timeline-item {
-            margin-bottom: 36px;
+        .timeline-item, .education-item {
+            margin-bottom: 32px;
+            padding: 12px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
 
-        .timeline-item:last-child {
-            margin-bottom: 0;
+        .timeline-item:hover, .education-item:hover {
+            border-color: #6B1D2D;
+            background: rgba(107, 29, 45, 0.05);
+            transform: translateX(6px);
         }
 
-        .timeline-item h4 {
+        .timeline-item h4, .education-item h4 {
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 6px;
         }
 
-        .timeline-date {
+        .timeline-date, .education-date {
             font-size: 0.85rem;
             color: #707070;
             margin-bottom: 12px;
@@ -266,37 +270,26 @@
             left: 0;
         }
 
-        .education-item {
-            margin-bottom: 28px;
-        }
-
-        .education-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .education-item h4 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .education-date {
-            font-size: 0.85rem;
-            color: #707070;
-        }
-
-        /* Skills */
+        /* Skills - cards minimalistas */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            gap: 30px;
         }
 
         .skill-category {
-            background: #0D0D0D;
             padding: 24px;
-            border-radius: 16px;
-            border: 1px solid #2A2A2A;
+            border-radius: 20px;
+            background: rgba(17, 17, 17, 0.4);
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(42, 42, 42, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .skill-category:hover {
+            border-color: #6B1D2D;
+            transform: translateY(-6px);
+            background: rgba(17, 17, 17, 0.7);
         }
 
         .skill-category h4 {
@@ -330,26 +323,27 @@
             transform: translateY(-2px);
         }
 
-        /* Projetos */
-        .projects-grid {
+        /* Projetos e Certificações - cards surgem e têm borda no hover */
+        .projects-grid, .certifications-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
-        .project-card {
-            background: #0D0D0D;
+        .project-card, .cert-card {
+            background: rgba(13, 13, 13, 0.5);
+            backdrop-filter: blur(2px);
             border: 1px solid #2A2A2A;
             border-radius: 20px;
             padding: 24px;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
         }
 
-        .project-card:hover {
-            transform: translateY(-8px);
+        .project-card:hover, .cert-card:hover {
             border-color: #6B1D2D;
+            transform: translateY(-8px);
+            background: rgba(13, 13, 13, 0.8);
+            box-shadow: 0 8px 20px rgba(107, 29, 45, 0.2);
         }
 
         .image-placeholder {
@@ -365,13 +359,13 @@
             border: 1px solid #2A2A2A;
         }
 
-        .project-card h3 {
+        .project-card h3, .cert-card h3 {
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 12px;
         }
 
-        .project-card p {
+        .project-card p, .cert-card p {
             font-size: 0.9rem;
             color: #A0A0A0;
             margin-bottom: 16px;
@@ -392,7 +386,7 @@
             font-size: 0.7rem;
         }
 
-        .card-link {
+        .card-link, .cert-link {
             color: #A0A0A0;
             text-decoration: none;
             font-size: 0.9rem;
@@ -400,48 +394,11 @@
             transition: color 0.3s ease;
         }
 
-        .card-link:hover {
+        .card-link:hover, .cert-link:hover {
             color: #6B1D2D;
         }
 
-        /* Certificações */
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .cert-card {
-            background: #0D0D0D;
-            border: 1px solid #2A2A2A;
-            border-radius: 20px;
-            padding: 24px;
-            transition: all 0.3s ease;
-        }
-
-        .cert-card:hover {
-            border-color: #6B1D2D;
-            transform: translateY(-4px);
-        }
-
-        .cert-card h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .cert-card p {
-            color: #A0A0A0;
-            margin-bottom: 16px;
-        }
-
-        .cert-link {
-            color: #6B1D2D;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Contato - alinhado */
+        /* Contato - sem caixas pesadas, mais integrado */
         .contact-wrapper {
             display: flex;
             gap: 56px;
@@ -450,20 +407,28 @@
 
         .contact-info {
             flex: 1;
-            background: #0D0D0D;
             padding: 32px;
             border-radius: 20px;
+            background: rgba(13, 13, 13, 0.4);
+            backdrop-filter: blur(2px);
             border: 1px solid #2A2A2A;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 28px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info:hover {
+            border-color: #6B1D2D;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
             gap: 18px;
+            margin-bottom: 28px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(6px);
         }
 
         .contact-item i {
@@ -489,13 +454,16 @@
 
         .contact-form {
             flex: 1;
-            background: #0D0D0D;
             padding: 32px;
             border-radius: 20px;
+            background: rgba(13, 13, 13, 0.4);
+            backdrop-filter: blur(2px);
             border: 1px solid #2A2A2A;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form:hover {
+            border-color: #6B1D2D;
         }
 
         .contact-form input, .contact-form textarea {
@@ -506,16 +474,14 @@
             color: #F0F0F0;
             font-family: 'Inter', sans-serif;
             font-size: 15px;
+            width: 100%;
+            margin-bottom: 16px;
+            transition: border 0.3s ease;
         }
 
         .contact-form input:focus, .contact-form textarea:focus {
             outline: none;
             border-color: #6B1D2D;
-        }
-
-        .contact-form textarea {
-            min-height: 120px;
-            resize: vertical;
         }
 
         .btn-group {
@@ -561,16 +527,25 @@
             color: #707070;
         }
 
-        /* Efeito de revelação ao rolar (sem cursor) */
-        .reveal {
+        /* Efeito de surgimento ao rolar a página (fluido, sem caixas quadradas) */
+        .fade-in-up {
             opacity: 0;
             transform: translateY(40px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
+            transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
 
-        .reveal.visible {
+        .fade-in-up.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* Animações em cascata para itens de grid */
+        .project-card, .cert-card, .skill-category, .timeline-item, .education-item {
+            transition-delay: 0s;
+        }
+
+        .project-card.visible, .cert-card.visible, .skill-category.visible, .timeline-item.visible, .education-item.visible {
+            transition-delay: calc(var(--order, 0) * 0.05s);
         }
 
         @media (max-width: 1024px) {
@@ -619,9 +594,6 @@
             .btn-group {
                 flex-direction: column;
             }
-            .trajetoria-col {
-                padding: 24px;
-            }
         }
     </style>
 </head>
@@ -661,15 +633,15 @@
 
     <section id="sobre">
         <div class="container">
-            <div class="section-title-wrapper reveal">
+            <div class="section-title-wrapper fade-in-up">
                 <h2 class="section-title">SOBRE</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="about-grid">
-                <div class="about-text reveal">
+                <div class="about-text fade-in-up">
                     Natural de SP. Minha relação com código começou como curiosidade, queria entender como as coisas funcionavam por trás das telas. Hoje, transformo essa curiosidade em software funcional, limpo e com propósito. Estudo Ciência da Computação na USCS e tenho experiência prática com Cloud, desenvolvimento de agentes de IA. Acredito que código bem feito é aquele que resolve problemas reais sem complicar o que já é simples.
                 </div>
-                <div class="objective-box reveal">
+                <div class="objective-box fade-in-up">
                     <div class="objective-label">OBJETIVO</div>
                     <p>Busco estágio ou posição júnior onde posso por em prática meus conhecimentos na tecnologia e minha capacidade de resolver problemas possam gerar impacto real. Quero contribuir, aprender e crescer em um ambiente que valorize código limpo, boas práticas e inovação responsável.</p>
                 </div>
@@ -679,14 +651,14 @@
 
     <section id="trajetoria">
         <div class="container">
-            <div class="section-title-wrapper reveal">
+            <div class="section-title-wrapper fade-in-up">
                 <h2 class="section-title">TRAJETÓRIA</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="trajetoria-grid">
-                <div class="trajetoria-col reveal">
-                    <h3>EXPERIÊNCIA</h3>
-                    <div class="timeline-item">
+                <div class="trajetoria-col">
+                    <h3 class="fade-in-up">EXPERIÊNCIA</h3>
+                    <div class="timeline-item fade-in-up" style="--order: 1;">
                         <h4>Saída22.com | Estagiário</h4>
                         <div class="timeline-date">Dezembro 2023 - Fevereiro 2024</div>
                         <ul class="timeline-bullets">
@@ -695,7 +667,7 @@
                             <li>Levantamento de recursos e grupos de usuários (IAM x rules)</li>
                         </ul>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item fade-in-up" style="--order: 2;">
                         <h4>Ouse Consultoria | Jovem Aprendiz</h4>
                         <div class="timeline-date">Fevereiro 2024 - Julho 2024</div>
                         <ul class="timeline-bullets">
@@ -704,7 +676,7 @@
                             <li>Otimização do processo de recrutamento</li>
                         </ul>
                     </div>
-                    <div class="timeline-item">
+                    <div class="timeline-item fade-in-up" style="--order: 3;">
                         <h4>Roveri Associados | Operador de Cobrança</h4>
                         <div class="timeline-date">Fevereiro 2025 - Dezembro 2025</div>
                         <ul class="timeline-bullets">
@@ -713,17 +685,17 @@
                         </ul>
                     </div>
                 </div>
-                <div class="trajetoria-col reveal">
-                    <h3>FORMAÇÃO</h3>
-                    <div class="education-item">
+                <div class="trajetoria-col">
+                    <h3 class="fade-in-up">FORMAÇÃO</h3>
+                    <div class="education-item fade-in-up" style="--order: 4;">
                         <h4>Ensino Fundamental | Colégio Caminare</h4>
                         <div class="education-date">2018 - 2021</div>
                     </div>
-                    <div class="education-item">
+                    <div class="education-item fade-in-up" style="--order: 5;">
                         <h4>Ensino Médio Técnico em Informática | Colégio Clóvis Bevilacqua</h4>
                         <div class="education-date">2022 - 2024</div>
                     </div>
-                    <div class="education-item">
+                    <div class="education-item fade-in-up" style="--order: 6;">
                         <h4>Bacharelado em Ciência da Computação | USCS</h4>
                         <div class="education-date">2025 - 2028 (Cursando)</div>
                     </div>
@@ -734,12 +706,12 @@
 
     <section id="skills">
         <div class="container">
-            <div class="section-title-wrapper reveal">
+            <div class="section-title-wrapper fade-in-up">
                 <h2 class="section-title">SKILLS</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="skills-grid">
-                <div class="skill-category reveal">
+                <div class="skill-category fade-in-up" style="--order: 1;">
                     <h4>BACKEND</h4>
                     <div class="badges">
                         <span class="badge">C#</span>
@@ -747,14 +719,14 @@
                         <span class="badge">Python</span>
                     </div>
                 </div>
-                <div class="skill-category reveal">
+                <div class="skill-category fade-in-up" style="--order: 2;">
                     <h4>FRONTEND</h4>
                     <div class="badges">
                         <span class="badge">Angular</span>
                         <span class="badge">JavaScript</span>
                     </div>
                 </div>
-                <div class="skill-category reveal">
+                <div class="skill-category fade-in-up" style="--order: 3;">
                     <h4>CLOUD</h4>
                     <div class="badges">
                         <span class="badge">GCP</span>
@@ -762,13 +734,13 @@
                         <span class="badge">Terraform</span>
                     </div>
                 </div>
-                <div class="skill-category reveal">
+                <div class="skill-category fade-in-up" style="--order: 4;">
                     <h4>DATABASE</h4>
                     <div class="badges">
                         <span class="badge">SQL Server</span>
                     </div>
                 </div>
-                <div class="skill-category reveal">
+                <div class="skill-category fade-in-up" style="--order: 5;">
                     <h4>FERRAMENTAS</h4>
                     <div class="badges">
                         <span class="badge">Git</span>
@@ -777,7 +749,7 @@
                         <span class="badge">FinOps</span>
                     </div>
                 </div>
-                <div class="skill-category reveal">
+                <div class="skill-category fade-in-up" style="--order: 6;">
                     <h4>IDIOMAS</h4>
                     <div class="badges">
                         <span class="badge">Português (Nativo)</span>
@@ -791,12 +763,12 @@
 
     <section id="projetos">
         <div class="container">
-            <div class="section-title-wrapper reveal">
+            <div class="section-title-wrapper fade-in-up">
                 <h2 class="section-title">PROJETOS</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="projects-grid">
-                <div class="project-card reveal">
+                <div class="project-card fade-in-up" style="--order: 1;">
                     <div class="image-placeholder">Em desenvolvimento</div>
                     <h3>Novo Projeto</h3>
                     <p>Projeto robusto em construção. Em breve mais detalhes.</p>
@@ -806,7 +778,7 @@
                     </div>
                     <a href="#" class="card-link">Ver código →</a>
                 </div>
-                <div class="project-card reveal">
+                <div class="project-card fade-in-up" style="--order: 2;">
                     <div class="image-placeholder">Em desenvolvimento</div>
                     <h3>Novo Projeto</h3>
                     <p>Projeto robusto em construção. Em breve mais detalhes.</p>
@@ -816,7 +788,7 @@
                     </div>
                     <a href="#" class="card-link">Ver código →</a>
                 </div>
-                <div class="project-card reveal">
+                <div class="project-card fade-in-up" style="--order: 3;">
                     <div class="image-placeholder">Em desenvolvimento</div>
                     <h3>Novo Projeto</h3>
                     <p>Projeto robusto em construção. Em breve mais detalhes.</p>
@@ -832,22 +804,22 @@
 
     <section id="certificacoes">
         <div class="container">
-            <div class="section-title-wrapper reveal">
+            <div class="section-title-wrapper fade-in-up">
                 <h2 class="section-title">CERTIFICAÇÕES</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="certifications-grid">
-                <div class="cert-card reveal">
+                <div class="cert-card fade-in-up" style="--order: 1;">
                     <h3>DevOps Fundamentals</h3>
                     <p>DIO · 05/2026</p>
                     <a href="https://www.dio.me/certificate/CKU7XJ6R/share" target="_blank" class="cert-link">Ver credencial →</a>
                 </div>
-                <div class="cert-card reveal">
+                <div class="cert-card fade-in-up" style="--order: 2;">
                     <h3>GitHub Certification</h3>
                     <p>DIO · 04/2026</p>
                     <a href="https://www.dio.me/certificate/JPL7S5T4/share" target="_blank" class="cert-link">Ver credencial →</a>
                 </div>
-                <div class="cert-card reveal">
+                <div class="cert-card fade-in-up" style="--order: 3;">
                     <h3>GenAI & Data</h3>
                     <p>Bradesco / DIO · 04/2026</p>
                     <a href="https://www.dio.me/certificate/Z3COJXHR/share" target="_blank" class="cert-link">Ver credencial →</a>
@@ -858,12 +830,12 @@
 
     <section id="contato">
         <div class="container">
-            <div class="section-title-wrapper reveal">
+            <div class="section-title-wrapper fade-in-up">
                 <h2 class="section-title">CONTATO</h2>
                 <div class="title-underline"></div>
             </div>
             <div class="contact-wrapper">
-                <div class="contact-info reveal">
+                <div class="contact-info fade-in-up">
                     <div class="contact-item">
                         <i class="fab fa-whatsapp"></i>
                         <a href="https://wa.me/5511941112038" target="_blank">+55 (11) 94111-2038</a>
@@ -881,7 +853,7 @@
                         <a href="mailto:murilo.pepineli.br@outlook.com.br">murilo.pepineli.br@outlook.com.br</a>
                     </div>
                 </div>
-                <div class="contact-form reveal">
+                <div class="contact-form fade-in-up">
                     <input type="text" id="nome" placeholder="Seu nome">
                     <input type="email" id="email" placeholder="Seu e-mail">
                     <textarea id="mensagem" placeholder="Sua mensagem..."></textarea>
@@ -902,10 +874,10 @@
 </footer>
 
 <script>
-    // Efeito de revelação ao rolar a página
-    const revealElements = document.querySelectorAll('.reveal');
+    // Efeito de surgimento ao rolar (Intersection Observer)
+    const fadeElements = document.querySelectorAll('.fade-in-up');
     
-    const revealObserver = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
@@ -913,7 +885,7 @@
         });
     }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
     
-    revealElements.forEach(el => revealObserver.observe(el));
+    fadeElements.forEach(el => observer.observe(el));
 
     // Header scroll effect
     window.addEventListener('scroll', () => {
