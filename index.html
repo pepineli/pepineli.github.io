@@ -33,7 +33,7 @@
             padding: 0 48px;
         }
 
-        /* Header (sem mudanças, apenas ajuste de cor) */
+        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -164,7 +164,7 @@
             color: #6B1D2D;
         }
 
-        /* Sobre - sem caixas pesadas, mais fluido */
+        /* Sobre */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -175,8 +175,6 @@
             color: #C0C0C0;
             line-height: 1.8;
             font-size: 18px;
-            transition: all 0.3s ease;
-            padding: 8px;
         }
 
         .objective-box {
@@ -201,16 +199,12 @@
             text-transform: uppercase;
         }
 
-        /* Trajetória - duas colunas, sem caixas externas */
+        /* Trajetória */
         .trajetoria-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 56px;
             align-items: start;
-        }
-
-        .trajetoria-col {
-            transition: all 0.3s ease;
         }
 
         .trajetoria-col h3 {
@@ -270,7 +264,7 @@
             left: 0;
         }
 
-        /* Skills - cards minimalistas */
+        /* Skills */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -323,7 +317,7 @@
             transform: translateY(-2px);
         }
 
-        /* Projetos e Certificações - cards surgem e têm borda no hover */
+        /* Projetos */
         .projects-grid, .certifications-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -398,7 +392,7 @@
             color: #6B1D2D;
         }
 
-        /* Contato - sem caixas pesadas, mais integrado */
+        /* Contato */
         .contact-wrapper {
             display: flex;
             gap: 56px;
@@ -527,7 +521,7 @@
             color: #707070;
         }
 
-        /* Efeito de surgimento ao rolar a página (fluido, sem caixas quadradas) */
+        /* Efeito de surgimento */
         .fade-in-up {
             opacity: 0;
             transform: translateY(40px);
@@ -539,20 +533,8 @@
             transform: translateY(0);
         }
 
-        /* Animações em cascata para itens de grid */
-        .project-card, .cert-card, .skill-category, .timeline-item, .education-item {
-            transition-delay: 0s;
-        }
-
-        .project-card.visible, .cert-card.visible, .skill-category.visible, .timeline-item.visible, .education-item.visible {
-            transition-delay: calc(var(--order, 0) * 0.05s);
-        }
-
         @media (max-width: 1024px) {
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .projects-grid, .certifications-grid {
+            .skills-grid, .projects-grid, .certifications-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             .contact-wrapper {
@@ -582,10 +564,7 @@
             .section-title {
                 font-size: 36px;
             }
-            .about-grid, .trajetoria-grid, .skills-grid {
-                grid-template-columns: 1fr;
-            }
-            .projects-grid, .certifications-grid {
+            .about-grid, .trajetoria-grid, .skills-grid, .projects-grid, .certifications-grid {
                 grid-template-columns: 1fr;
             }
             section {
@@ -614,7 +593,7 @@
             <a href="#certificacoes">CERTIFICAÇÕES</a>
             <span class="separator">·</span>
             <a href="#contato">CONTATO</a>
-            <a href="#" class="cv-link" id="downloadCvNav">CV</a>
+            <a href="https://raw.githubusercontent.com/pepineli/pepineli.github.io/main/CV_MuriloPepineli%20(1).pdf" class="cv-link" download>CV</a>
         </div>
     </div>
 </header>
@@ -658,7 +637,7 @@
             <div class="trajetoria-grid">
                 <div class="trajetoria-col">
                     <h3 class="fade-in-up">EXPERIÊNCIA</h3>
-                    <div class="timeline-item fade-in-up" style="--order: 1;">
+                    <div class="timeline-item fade-in-up">
                         <h4>Saída22.com | Estagiário</h4>
                         <div class="timeline-date">Dezembro 2023 - Fevereiro 2024</div>
                         <ul class="timeline-bullets">
@@ -667,7 +646,7 @@
                             <li>Levantamento de recursos e grupos de usuários (IAM x rules)</li>
                         </ul>
                     </div>
-                    <div class="timeline-item fade-in-up" style="--order: 2;">
+                    <div class="timeline-item fade-in-up">
                         <h4>Ouse Consultoria | Jovem Aprendiz</h4>
                         <div class="timeline-date">Fevereiro 2024 - Julho 2024</div>
                         <ul class="timeline-bullets">
@@ -676,7 +655,7 @@
                             <li>Otimização do processo de recrutamento</li>
                         </ul>
                     </div>
-                    <div class="timeline-item fade-in-up" style="--order: 3;">
+                    <div class="timeline-item fade-in-up">
                         <h4>Roveri Associados | Operador de Cobrança</h4>
                         <div class="timeline-date">Fevereiro 2025 - Dezembro 2025</div>
                         <ul class="timeline-bullets">
@@ -687,15 +666,15 @@
                 </div>
                 <div class="trajetoria-col">
                     <h3 class="fade-in-up">FORMAÇÃO</h3>
-                    <div class="education-item fade-in-up" style="--order: 4;">
+                    <div class="education-item fade-in-up">
                         <h4>Ensino Fundamental | Colégio Caminare</h4>
                         <div class="education-date">2018 - 2021</div>
                     </div>
-                    <div class="education-item fade-in-up" style="--order: 5;">
+                    <div class="education-item fade-in-up">
                         <h4>Ensino Médio Técnico em Informática | Colégio Clóvis Bevilacqua</h4>
                         <div class="education-date">2022 - 2024</div>
                     </div>
-                    <div class="education-item fade-in-up" style="--order: 6;">
+                    <div class="education-item fade-in-up">
                         <h4>Bacharelado em Ciência da Computação | USCS</h4>
                         <div class="education-date">2025 - 2028 (Cursando)</div>
                     </div>
@@ -711,7 +690,7 @@
                 <div class="title-underline"></div>
             </div>
             <div class="skills-grid">
-                <div class="skill-category fade-in-up" style="--order: 1;">
+                <div class="skill-category fade-in-up">
                     <h4>BACKEND</h4>
                     <div class="badges">
                         <span class="badge">C#</span>
@@ -719,14 +698,14 @@
                         <span class="badge">Python</span>
                     </div>
                 </div>
-                <div class="skill-category fade-in-up" style="--order: 2;">
+                <div class="skill-category fade-in-up">
                     <h4>FRONTEND</h4>
                     <div class="badges">
                         <span class="badge">Angular</span>
                         <span class="badge">JavaScript</span>
                     </div>
                 </div>
-                <div class="skill-category fade-in-up" style="--order: 3;">
+                <div class="skill-category fade-in-up">
                     <h4>CLOUD</h4>
                     <div class="badges">
                         <span class="badge">GCP</span>
@@ -734,13 +713,13 @@
                         <span class="badge">Terraform</span>
                     </div>
                 </div>
-                <div class="skill-category fade-in-up" style="--order: 4;">
+                <div class="skill-category fade-in-up">
                     <h4>DATABASE</h4>
                     <div class="badges">
                         <span class="badge">SQL Server</span>
                     </div>
                 </div>
-                <div class="skill-category fade-in-up" style="--order: 5;">
+                <div class="skill-category fade-in-up">
                     <h4>FERRAMENTAS</h4>
                     <div class="badges">
                         <span class="badge">Git</span>
@@ -749,7 +728,7 @@
                         <span class="badge">FinOps</span>
                     </div>
                 </div>
-                <div class="skill-category fade-in-up" style="--order: 6;">
+                <div class="skill-category fade-in-up">
                     <h4>IDIOMAS</h4>
                     <div class="badges">
                         <span class="badge">Português (Nativo)</span>
@@ -768,7 +747,7 @@
                 <div class="title-underline"></div>
             </div>
             <div class="projects-grid">
-                <div class="project-card fade-in-up" style="--order: 1;">
+                <div class="project-card fade-in-up">
                     <div class="image-placeholder">Em desenvolvimento</div>
                     <h3>Novo Projeto</h3>
                     <p>Projeto robusto em construção. Em breve mais detalhes.</p>
@@ -778,7 +757,7 @@
                     </div>
                     <a href="#" class="card-link">Ver código →</a>
                 </div>
-                <div class="project-card fade-in-up" style="--order: 2;">
+                <div class="project-card fade-in-up">
                     <div class="image-placeholder">Em desenvolvimento</div>
                     <h3>Novo Projeto</h3>
                     <p>Projeto robusto em construção. Em breve mais detalhes.</p>
@@ -788,7 +767,7 @@
                     </div>
                     <a href="#" class="card-link">Ver código →</a>
                 </div>
-                <div class="project-card fade-in-up" style="--order: 3;">
+                <div class="project-card fade-in-up">
                     <div class="image-placeholder">Em desenvolvimento</div>
                     <h3>Novo Projeto</h3>
                     <p>Projeto robusto em construção. Em breve mais detalhes.</p>
@@ -809,17 +788,17 @@
                 <div class="title-underline"></div>
             </div>
             <div class="certifications-grid">
-                <div class="cert-card fade-in-up" style="--order: 1;">
+                <div class="cert-card fade-in-up">
                     <h3>DevOps Fundamentals</h3>
                     <p>DIO · 05/2026</p>
                     <a href="https://www.dio.me/certificate/CKU7XJ6R/share" target="_blank" class="cert-link">Ver credencial →</a>
                 </div>
-                <div class="cert-card fade-in-up" style="--order: 2;">
+                <div class="cert-card fade-in-up">
                     <h3>GitHub Certification</h3>
                     <p>DIO · 04/2026</p>
                     <a href="https://www.dio.me/certificate/JPL7S5T4/share" target="_blank" class="cert-link">Ver credencial →</a>
                 </div>
-                <div class="cert-card fade-in-up" style="--order: 3;">
+                <div class="cert-card fade-in-up">
                     <h3>GenAI & Data</h3>
                     <p>Bradesco / DIO · 04/2026</p>
                     <a href="https://www.dio.me/certificate/Z3COJXHR/share" target="_blank" class="cert-link">Ver credencial →</a>
@@ -859,7 +838,7 @@
                     <textarea id="mensagem" placeholder="Sua mensagem..."></textarea>
                     <div class="btn-group">
                         <button class="submit-btn" onclick="enviarEmail()">Enviar mensagem</button>
-                        <a href="#" class="download-cv" id="downloadCvBtn">Baixar CV</a>
+                        <a href="https://raw.githubusercontent.com/pepineli/pepineli.github.io/main/CV_MuriloPepineli%20(1).pdf" class="download-cv" download>Baixar CV</a>
                     </div>
                 </div>
             </div>
@@ -874,9 +853,8 @@
 </footer>
 
 <script>
-    // Efeito de surgimento ao rolar (Intersection Observer)
+    // Efeito de surgimento
     const fadeElements = document.querySelectorAll('.fade-in-up');
-    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -884,7 +862,6 @@
             }
         });
     }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
-    
     fadeElements.forEach(el => observer.observe(el));
 
     // Header scroll effect
@@ -897,7 +874,7 @@
         }
     });
 
-    // Função do formulário
+    // Formulário
     function enviarEmail() {
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
@@ -910,21 +887,6 @@
         const body = `Nome: ${nome}\nE-mail: ${email}\n\nMensagem:\n${mensagem}`;
         window.location.href = `mailto:murilo.pepineli.br@outlook.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
-
-    // Download do CV (placeholder)
-    function downloadCV() {
-        alert('Adicione o link do seu CV em PDF aqui. Hospede no Google Drive, Dropbox ou no próprio GitHub.');
-    }
-
-    document.getElementById('downloadCvNav').addEventListener('click', (e) => {
-        e.preventDefault();
-        downloadCV();
-    });
-
-    document.getElementById('downloadCvBtn').addEventListener('click', (e) => {
-        e.preventDefault();
-        downloadCV();
-    });
 </script>
 
 </body>
