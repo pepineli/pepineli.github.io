@@ -33,7 +33,7 @@
             padding: 0 48px;
         }
 
-        /* Header - centralizado proporcionalmente */
+        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -43,7 +43,7 @@
             backdrop-filter: blur(12px);
             z-index: 1000;
             padding: 18px 0;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
 
@@ -68,11 +68,12 @@
             color: #6B1D2D;
             text-decoration: none;
             letter-spacing: -0.5px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: inline-block;
         }
 
         .logo:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             color: #8B2D3D;
         }
 
@@ -88,9 +89,10 @@
             text-decoration: none;
             font-size: 16px;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             padding: 4px 0;
             border-bottom: 1px solid transparent;
+            display: inline-block;
         }
 
         .nav a:hover {
@@ -128,7 +130,7 @@
             color: #F0F0F0;
             display: inline-block;
             border-bottom: 2px solid transparent;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
 
         .section-title:hover {
@@ -159,11 +161,12 @@
             font-size: 76px;
             font-weight: 800;
             margin-bottom: 16px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: inline-block;
         }
 
         .hero h1:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             color: #6B1D2D;
         }
 
@@ -174,7 +177,8 @@
             color: #6B1D2D;
             margin-bottom: 28px;
             letter-spacing: -0.3px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: inline-block;
         }
 
         .hero h2:hover {
@@ -190,7 +194,7 @@
         .social-icons a {
             color: #A0A0A0;
             font-size: 30px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             display: inline-block;
         }
 
@@ -199,7 +203,7 @@
             transform: translateY(-4px);
         }
 
-        /* Sobre */
+        /* Sobre - TODOS OS ELEMENTOS COM EFEITO */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -210,21 +214,22 @@
             color: #C0C0C0;
             line-height: 1.7;
             font-size: 17px;
-            transition: all 0.3s ease;
-            padding: 8px;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            padding: 12px;
             border-radius: 12px;
+            display: block;
         }
 
         .about-text:hover {
             transform: translateY(-3px);
-            background: rgba(107, 29, 45, 0.03);
+            background: rgba(107, 29, 45, 0.04);
         }
 
         .objective-box {
             background: rgba(26, 10, 16, 0.5);
             border-left: 3px solid #6B1D2D;
             padding: 24px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             border-radius: 0 12px 12px 0;
         }
 
@@ -241,6 +246,21 @@
             color: #6B1D2D;
             margin-bottom: 12px;
             text-transform: uppercase;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: inline-block;
+        }
+
+        .objective-label:hover {
+            transform: translateY(-2px);
+        }
+
+        .objective-box p {
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: block;
+        }
+
+        .objective-box p:hover {
+            transform: translateY(-2px);
         }
 
         /* Trajetória */
@@ -260,7 +280,7 @@
             border-bottom: 1px solid rgba(107, 29, 45, 0.4);
             display: inline-block;
             padding-bottom: 6px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
 
         .trajetoria-col h3:hover {
@@ -272,7 +292,7 @@
             margin-bottom: 28px;
             padding: 10px 14px;
             border-radius: 12px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             border: 1px solid transparent;
         }
 
@@ -286,12 +306,26 @@
             font-size: 17px;
             font-weight: 700;
             margin-bottom: 4px;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: inline-block;
+        }
+
+        .timeline-item h4:hover, .education-item h4:hover {
+            transform: translateY(-2px);
+            color: #6B1D2D;
         }
 
         .timeline-date, .education-date {
             font-size: 0.8rem;
             color: #707070;
             margin-bottom: 10px;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: inline-block;
+        }
+
+        .timeline-date:hover, .education-date:hover {
+            transform: translateY(-1px);
+            color: #909090;
         }
 
         .timeline-bullets {
@@ -305,7 +339,7 @@
             padding-left: 18px;
             position: relative;
             font-size: 14px;
-            transition: all 0.2s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
 
         .timeline-bullets li:hover {
@@ -334,7 +368,7 @@
             background: rgba(17, 17, 17, 0.4);
             backdrop-filter: blur(2px);
             border: 1px solid rgba(42, 42, 42, 0.5);
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
 
         .skill-category:hover {
@@ -349,6 +383,12 @@
             color: #6B1D2D;
             margin-bottom: 16px;
             letter-spacing: 0.5px;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: inline-block;
+        }
+
+        .skill-category h4:hover {
+            transform: translateY(-2px);
         }
 
         .badges {
@@ -366,7 +406,7 @@
             font-size: 0.7rem;
             font-weight: 500;
             letter-spacing: 0.3px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             display: inline-block;
         }
 
@@ -389,7 +429,7 @@
             border: 1px solid #2A2A2A;
             border-radius: 18px;
             padding: 20px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -413,7 +453,7 @@
             color: #707070;
             font-size: 13px;
             border: 1px solid #2A2A2A;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
 
         .project-card:hover .image-placeholder {
@@ -424,6 +464,14 @@
             font-size: 1.2rem;
             font-weight: 700;
             margin-bottom: 8px;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: inline-block;
+            align-self: flex-start;
+        }
+
+        .project-card h3:hover, .cert-card h3:hover {
+            transform: translateY(-2px);
+            color: #6B1D2D;
         }
 
         .project-card p, .cert-card p {
@@ -431,6 +479,11 @@
             color: #A0A0A0;
             margin-bottom: 14px;
             flex-grow: 1;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        .project-card p:hover, .cert-card p:hover {
+            transform: translateY(-1px);
         }
 
         .project-badges {
@@ -446,7 +499,8 @@
             padding: 3px 10px;
             border-radius: 18px;
             font-size: 0.65rem;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: inline-block;
         }
 
         .project-badge:hover {
@@ -459,8 +513,9 @@
             text-decoration: none;
             font-size: 0.85rem;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             align-self: flex-start;
+            display: inline-block;
         }
 
         .card-link:hover, .cert-link:hover {
@@ -482,7 +537,7 @@
             background: rgba(13, 13, 13, 0.4);
             backdrop-filter: blur(2px);
             border: 1px solid #2A2A2A;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -498,7 +553,7 @@
             align-items: center;
             gap: 16px;
             margin-bottom: 22px;
-            transition: all 0.25s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
 
         .contact-item:hover {
@@ -509,7 +564,7 @@
             font-size: 22px;
             color: #A0A0A0;
             width: 28px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
 
         .contact-item:hover i {
@@ -521,12 +576,13 @@
             color: #F0F0F0;
             text-decoration: none;
             font-size: 15px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: inline-block;
         }
 
         .contact-item a:hover {
             color: #6B1D2D;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
         }
 
         .contact-form {
@@ -536,7 +592,7 @@
             background: rgba(13, 13, 13, 0.4);
             backdrop-filter: blur(2px);
             border: 1px solid #2A2A2A;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             display: flex;
             flex-direction: column;
         }
@@ -556,12 +612,12 @@
             font-size: 14px;
             width: 100%;
             margin-bottom: 14px;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
 
         .contact-form input:hover, .contact-form textarea:hover {
             border-color: #6B1D2D;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
         }
 
         .contact-form input:focus, .contact-form textarea:focus {
@@ -584,7 +640,7 @@
             font-weight: 600;
             font-size: 14px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             text-decoration: none;
             display: inline-block;
             text-align: center;
@@ -615,11 +671,12 @@
         .footer p {
             font-size: 0.75rem;
             color: #707070;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: inline-block;
         }
 
         .footer p:hover {
-            transform: translateY(-1px);
+            transform: translateY(-2px);
             color: #A0A0A0;
         }
 
@@ -627,7 +684,7 @@
         .fade-in-up {
             opacity: 0;
             transform: translateY(30px);
-            transition: opacity 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
         }
 
         .fade-in-up.visible {
