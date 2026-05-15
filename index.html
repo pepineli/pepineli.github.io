@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Murilo Pepineli | Portfólio</title>
-    <meta name="description" content="Portfólio de Murilo Pepineli - Estudante de Ciência da Computação">
+    <title>Murilo Pepineli | Backend Engineer & AI Enthusiast</title>
+    <meta name="description" content="Portfólio de Murilo Pepineli - Backend Engineer e entusiasta de IA">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome Icons (apenas para redes sociais) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
@@ -30,14 +27,13 @@
             line-height: 1.6;
         }
 
-        /* Container */
         .container {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 48px;
         }
 
-        /* Header Fixo */
+        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -67,15 +63,15 @@
 
         .logo {
             font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            font-weight: 700;
+            font-size: 28px;
+            font-weight: 800;
             color: #6B1D2D;
             text-decoration: none;
         }
 
         .nav {
             display: flex;
-            gap: 24px;
+            gap: 28px;
             align-items: center;
             flex-wrap: wrap;
         }
@@ -98,8 +94,8 @@
 
         .nav .cv-link {
             border: 1px solid #6B1D2D;
-            padding: 8px 16px;
-            border-radius: 24px;
+            padding: 8px 20px;
+            border-radius: 30px;
         }
 
         .nav .cv-link:hover {
@@ -107,28 +103,29 @@
             color: #F0F0F0;
         }
 
-        /* Seções */
         section {
             padding: 100px 0;
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 32px;
+            font-size: 48px;
             font-weight: 700;
             margin-bottom: 20px;
             color: #F0F0F0;
         }
 
-        .section-title-wrapper {
+        .section-subtitle {
+            font-size: 18px;
+            color: #A0A0A0;
             margin-bottom: 48px;
         }
 
         .title-underline {
-            width: 60px;
-            height: 2px;
+            width: 80px;
+            height: 3px;
             background: #6B1D2D;
-            margin-top: 12px;
+            margin-top: 16px;
         }
 
         /* Hero */
@@ -138,33 +135,34 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 120px 0 80px;
+            padding: 140px 0 80px;
         }
 
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 72px;
-            font-weight: 700;
-            margin-bottom: 16px;
+            font-size: 82px;
+            font-weight: 800;
+            margin-bottom: 20px;
         }
 
         .hero h2 {
             font-family: 'Inter', sans-serif;
-            font-size: 24px;
-            font-weight: 400;
-            color: #A0A0A0;
+            font-size: 28px;
+            font-weight: 500;
+            color: #6B1D2D;
             margin-bottom: 32px;
+            letter-spacing: -0.5px;
         }
 
         .social-icons {
             display: flex;
-            gap: 24px;
+            gap: 28px;
             justify-content: center;
         }
 
         .social-icons a {
             color: #A0A0A0;
-            font-size: 28px;
+            font-size: 32px;
             transition: color 0.3s ease;
         }
 
@@ -176,43 +174,60 @@
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            gap: 56px;
         }
 
         .about-text {
-            color: #A0A0A0;
+            color: #C0C0C0;
             line-height: 1.8;
+            font-size: 18px;
         }
 
         .objective-box {
             background: #1A0A10;
             border-left: 4px solid #6B1D2D;
-            padding: 24px;
+            padding: 28px;
         }
 
-        .objective-box .objective-label {
+        .objective-label {
             font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 12px;
-            letter-spacing: 2px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 3px;
             color: #6B1D2D;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             text-transform: uppercase;
         }
 
         .objective-box p {
             color: #E0E0E0;
-            line-height: 1.6;
+            line-height: 1.7;
+            font-size: 17px;
         }
 
-        /* Timeline (Trajetória) */
-        .timeline-item {
+        /* Trajetória - duas colunas */
+        .trajetoria-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+        }
+
+        .trajetoria-col h3 {
+            font-size: 22px;
+            font-weight: 700;
             margin-bottom: 32px;
+            color: #6B1D2D;
+            letter-spacing: -0.3px;
         }
 
-        .timeline-item h3 {
-            font-weight: 600;
-            margin-bottom: 4px;
+        .timeline-item {
+            margin-bottom: 36px;
+        }
+
+        .timeline-item h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 6px;
         }
 
         .timeline-date {
@@ -227,25 +242,27 @@
         }
 
         .timeline-bullets li {
-            color: #A0A0A0;
-            margin-bottom: 8px;
-            padding-left: 16px;
+            color: #B0B0B0;
+            margin-bottom: 6px;
+            padding-left: 18px;
             position: relative;
+            font-size: 15px;
         }
 
         .timeline-bullets li::before {
-            content: "•";
+            content: "▹";
             color: #6B1D2D;
             position: absolute;
             left: 0;
         }
 
         .education-item {
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
 
-        .education-item h3 {
-            font-weight: 600;
+        .education-item h4 {
+            font-size: 18px;
+            font-weight: 700;
             margin-bottom: 4px;
         }
 
@@ -254,19 +271,19 @@
             color: #707070;
         }
 
-        /* Badges (Stack) */
-        .stack-category {
-            margin-bottom: 32px;
+        /* Skills - grid de categorias */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
         }
 
-        .stack-category h4 {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
+        .skill-category h4 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #6B1D2D;
+            margin-bottom: 20px;
             letter-spacing: 1px;
-            color: #A0A0A0;
-            margin-bottom: 16px;
         }
 
         .badges {
@@ -277,49 +294,50 @@
 
         .badge {
             background: #1A1A1A;
-            border: 1px solid #2A2A2A;
+            border: 1px solid #333;
             color: #E0E0E0;
-            padding: 6px 16px;
-            border-radius: 32px;
-            font-size: 0.7rem;
-            text-transform: uppercase;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
         }
 
         .badge:hover {
             border-color: #6B1D2D;
+            transform: translateY(-2px);
         }
 
-        /* Projetos e Certificações - Grid */
-        .projects-grid, .certifications-grid {
+        /* Projetos */
+        .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            gap: 30px;
         }
 
-        .project-card, .cert-card {
+        .project-card {
             background: #111111;
             border: 1px solid #2A2A2A;
-            border-radius: 16px;
-            padding: 20px;
+            border-radius: 20px;
+            padding: 24px;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .project-card:hover, .cert-card:hover {
-            transform: scale(1.02);
+        .project-card:hover {
+            transform: translateY(-8px);
             border-color: #6B1D2D;
         }
 
-        .project-card:hover::after, .cert-card:hover::after {
+        .project-card:hover::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 2px;
+            height: 3px;
             background: #6B1D2D;
             animation: lineGrow 0.3s ease forwards;
         }
@@ -330,49 +348,51 @@
         }
 
         .image-placeholder {
-            background: linear-gradient(135deg, #1A1A1A, #111111);
+            background: linear-gradient(135deg, #1E1E1E, #0A0A0A);
             height: 160px;
-            border-radius: 12px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
             color: #707070;
             font-size: 14px;
+            border: 1px solid #2A2A2A;
         }
 
-        .project-card h3, .cert-card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .project-card p, .cert-card p {
-            font-size: 0.85rem;
-            color: #A0A0A0;
+        .project-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
             margin-bottom: 12px;
+        }
+
+        .project-card p {
+            font-size: 0.9rem;
+            color: #A0A0A0;
+            margin-bottom: 16px;
+            line-height: 1.5;
         }
 
         .project-badges {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 16px;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
         .project-badge {
             background: #1A1A1A;
-            border: 1px solid #2A2A2A;
+            border: 1px solid #333;
             padding: 4px 12px;
             border-radius: 20px;
-            font-size: 0.65rem;
-            text-transform: uppercase;
+            font-size: 0.7rem;
         }
 
         .card-link {
             color: #A0A0A0;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
 
@@ -380,41 +400,66 @@
             color: #6B1D2D;
         }
 
-        .cert-link {
-            display: inline-block;
-            margin-top: 12px;
+        /* Certificações */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .cert-card {
+            background: #111111;
+            border: 1px solid #2A2A2A;
+            border-radius: 20px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            border-color: #6B1D2D;
+            transform: translateY(-4px);
+        }
+
+        .cert-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .cert-card p {
             color: #A0A0A0;
-            text-decoration: none;
-            font-size: 0.85rem;
+            margin-bottom: 16px;
         }
 
-        .cert-link:hover {
+        .cert-link {
             color: #6B1D2D;
+            text-decoration: none;
+            font-weight: 600;
         }
 
-        /* Contato - duas colunas */
+        /* Contato */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 48px;
+            gap: 56px;
         }
 
         .contact-info {
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            gap: 28px;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 18px;
         }
 
         .contact-item i {
-            font-size: 24px;
+            font-size: 28px;
             color: #A0A0A0;
-            width: 32px;
+            width: 36px;
             transition: color 0.3s ease;
         }
 
@@ -425,6 +470,7 @@
         .contact-item a {
             color: #F0F0F0;
             text-decoration: none;
+            font-size: 18px;
         }
 
         .contact-item a:hover {
@@ -434,16 +480,17 @@
         .contact-form {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 20px;
         }
 
         .contact-form input, .contact-form textarea {
             background: #111111;
             border: 1px solid #2A2A2A;
-            border-radius: 8px;
-            padding: 12px 16px;
+            border-radius: 12px;
+            padding: 14px 18px;
             color: #F0F0F0;
             font-family: 'Inter', sans-serif;
+            font-size: 15px;
         }
 
         .contact-form input:focus, .contact-form textarea:focus {
@@ -452,7 +499,7 @@
         }
 
         .contact-form textarea {
-            min-height: 120px;
+            min-height: 130px;
             resize: vertical;
         }
 
@@ -460,35 +507,37 @@
             background: #6B1D2D;
             color: #F0F0F0;
             border: none;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 14px 28px;
+            border-radius: 40px;
             font-weight: 600;
+            font-size: 16px;
             cursor: pointer;
-            transition: opacity 0.3s ease;
+            transition: all 0.3s ease;
+            width: fit-content;
         }
 
         .submit-btn:hover {
             opacity: 0.9;
+            transform: translateY(-2px);
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 40px 0;
+            padding: 50px 0;
             border-top: 1px solid #2A2A2A;
         }
 
         .footer p {
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             color: #707070;
-            margin-bottom: 8px;
         }
 
-        /* Animações de scroll */
+        /* Animações */
         .fade-up {
             opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
         }
 
         .fade-up.visible {
@@ -498,6 +547,9 @@
 
         /* Responsivo */
         @media (max-width: 1024px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .projects-grid, .certifications-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -514,12 +566,18 @@
                 gap: 12px;
             }
             .nav a {
-                font-size: 12px;
+                font-size: 11px;
             }
             .hero h1 {
                 font-size: 48px;
             }
-            .about-grid, .contact-grid {
+            .hero h2 {
+                font-size: 20px;
+            }
+            .section-title {
+                font-size: 36px;
+            }
+            .about-grid, .trajetoria-grid, .contact-grid, .skills-grid {
                 grid-template-columns: 1fr;
             }
             .projects-grid, .certifications-grid {
@@ -541,7 +599,7 @@
             <span class="separator">·</span>
             <a href="#trajetoria">TRAJETÓRIA</a>
             <span class="separator">·</span>
-            <a href="#stack">STACK</a>
+            <a href="#skills">SKILLS</a>
             <span class="separator">·</span>
             <a href="#projetos">PROJETOS</a>
             <span class="separator">·</span>
@@ -554,11 +612,10 @@
 </header>
 
 <main>
-    <!-- Hero -->
     <section class="hero">
         <div class="container">
             <h1>Murilo Pepineli</h1>
-            <h2>Estudante de Ciência da Computação</h2>
+            <h2>Backend Engineer & AI Enthusiast</h2>
             <div class="social-icons">
                 <a href="https://linkedin.com/in/murilo-pepineli" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/pepineli" target="_blank"><i class="fab fa-github"></i></a>
@@ -566,7 +623,6 @@
         </div>
     </section>
 
-    <!-- Sobre -->
     <section id="sobre">
         <div class="container">
             <div class="section-title-wrapper">
@@ -585,116 +641,118 @@
         </div>
     </section>
 
-    <!-- Trajetória -->
     <section id="trajetoria">
         <div class="container">
             <div class="section-title-wrapper">
                 <h2 class="section-title">TRAJETÓRIA</h2>
                 <div class="title-underline"></div>
             </div>
-            
-            <h3 style="margin-bottom: 24px; font-weight: 600;">Experiência</h3>
-            <div class="timeline-item fade-up">
-                <h3>Saída22.com | Estagiário</h3>
-                <div class="timeline-date">Dezembro 2023 - Fevereiro 2024</div>
-                <ul class="timeline-bullets">
-                    <li>Estágio em ambiente Cloud (GCP, Azure)</li>
-                    <li>Utilização de Terraform em FinOps</li>
-                    <li>Levantamento de recursos e grupos de usuários (IAM x rules)</li>
-                </ul>
-            </div>
-            <div class="timeline-item fade-up">
-                <h3>Ouse Consultoria | Jovem Aprendiz</h3>
-                <div class="timeline-date">Fevereiro 2024 - Julho 2024</div>
-                <ul class="timeline-bullets">
-                    <li>Triagem de currículos na plataforma Indeed</li>
-                    <li>Encaminhamento de candidatos e gerenciamento de formulários</li>
-                    <li>Otimização do processo de recrutamento</li>
-                </ul>
-            </div>
-            <div class="timeline-item fade-up">
-                <h3>Roveri Associados | Operador de Cobrança</h3>
-                <div class="timeline-date">Fevereiro 2025 - Dezembro 2025</div>
-                <ul class="timeline-bullets">
-                    <li>Atendimento humanizado e objetivo</li>
-                    <li>Cobrança ativa com negociação eficaz</li>
-                </ul>
-            </div>
-
-            <h3 style="margin: 48px 0 24px; font-weight: 600;">Formação</h3>
-            <div class="education-item fade-up">
-                <h3>Bacharelado em Ciência da Computação | USCS</h3>
-                <div class="education-date">2025 - 2028 (Cursando)</div>
-            </div>
-            <div class="education-item fade-up">
-                <h3>Ensino Médio Técnico em Informática | Colégio Clóvis Bevilacqua</h3>
-                <div class="education-date">2022 - 2024</div>
-            </div>
-            <div class="education-item fade-up">
-                <h3>Ensino Fundamental | Colégio Caminare</h3>
-                <div class="education-date">2018 - 2021</div>
+            <div class="trajetoria-grid">
+                <div class="trajetoria-col fade-up">
+                    <h3>EXPERIÊNCIA</h3>
+                    <div class="timeline-item">
+                        <h4>Saída22.com | Estagiário</h4>
+                        <div class="timeline-date">Dezembro 2023 - Fevereiro 2024</div>
+                        <ul class="timeline-bullets">
+                            <li>Estágio em ambiente Cloud (GCP, Azure)</li>
+                            <li>Utilização de Terraform em FinOps</li>
+                            <li>Levantamento de recursos e grupos de usuários (IAM x rules)</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Ouse Consultoria | Jovem Aprendiz</h4>
+                        <div class="timeline-date">Fevereiro 2024 - Julho 2024</div>
+                        <ul class="timeline-bullets">
+                            <li>Triagem de currículos na plataforma Indeed</li>
+                            <li>Encaminhamento de candidatos e gerenciamento de formulários</li>
+                            <li>Otimização do processo de recrutamento</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Roveri Associados | Operador de Cobrança</h4>
+                        <div class="timeline-date">Fevereiro 2025 - Dezembro 2025</div>
+                        <ul class="timeline-bullets">
+                            <li>Atendimento humanizado e objetivo</li>
+                            <li>Cobrança ativa com negociação eficaz</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="trajetoria-col fade-up">
+                    <h3>FORMAÇÃO</h3>
+                    <div class="education-item">
+                        <h4>Ensino Fundamental | Colégio Caminare</h4>
+                        <div class="education-date">2018 - 2021</div>
+                    </div>
+                    <div class="education-item">
+                        <h4>Ensino Médio Técnico em Informática | Colégio Clóvis Bevilacqua</h4>
+                        <div class="education-date">2022 - 2024</div>
+                    </div>
+                    <div class="education-item">
+                        <h4>Bacharelado em Ciência da Computação | USCS</h4>
+                        <div class="education-date">2025 - 2028 (Cursando)</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Stack -->
-    <section id="stack">
+    <section id="skills">
         <div class="container">
             <div class="section-title-wrapper">
-                <h2 class="section-title">STACK</h2>
+                <h2 class="section-title">SKILLS</h2>
                 <div class="title-underline"></div>
             </div>
-            
-            <div class="stack-category fade-up">
-                <h4>BACKEND</h4>
-                <div class="badges">
-                    <span class="badge">C#</span>
-                    <span class="badge">Java</span>
-                    <span class="badge">Python</span>
+            <div class="skills-grid">
+                <div class="skill-category fade-up">
+                    <h4>BACKEND</h4>
+                    <div class="badges">
+                        <span class="badge">C#</span>
+                        <span class="badge">Java</span>
+                        <span class="badge">Python</span>
+                    </div>
                 </div>
-            </div>
-            <div class="stack-category fade-up">
-                <h4>FRONTEND</h4>
-                <div class="badges">
-                    <span class="badge">Angular</span>
-                    <span class="badge">JavaScript</span>
+                <div class="skill-category fade-up">
+                    <h4>FRONTEND</h4>
+                    <div class="badges">
+                        <span class="badge">Angular</span>
+                        <span class="badge">JavaScript</span>
+                    </div>
                 </div>
-            </div>
-            <div class="stack-category fade-up">
-                <h4>CLOUD</h4>
-                <div class="badges">
-                    <span class="badge">GCP</span>
-                    <span class="badge">Azure</span>
-                    <span class="badge">Terraform</span>
+                <div class="skill-category fade-up">
+                    <h4>CLOUD</h4>
+                    <div class="badges">
+                        <span class="badge">GCP</span>
+                        <span class="badge">Azure</span>
+                        <span class="badge">Terraform</span>
+                    </div>
                 </div>
-            </div>
-            <div class="stack-category fade-up">
-                <h4>DATABASE</h4>
-                <div class="badges">
-                    <span class="badge">SQL Server</span>
+                <div class="skill-category fade-up">
+                    <h4>DATABASE</h4>
+                    <div class="badges">
+                        <span class="badge">SQL Server</span>
+                    </div>
                 </div>
-            </div>
-            <div class="stack-category fade-up">
-                <h4>FERRAMENTAS</h4>
-                <div class="badges">
-                    <span class="badge">Git</span>
-                    <span class="badge">Docker</span>
-                    <span class="badge">Swagger</span>
-                    <span class="badge">FinOps</span>
+                <div class="skill-category fade-up">
+                    <h4>FERRAMENTAS</h4>
+                    <div class="badges">
+                        <span class="badge">Git</span>
+                        <span class="badge">Docker</span>
+                        <span class="badge">Swagger</span>
+                        <span class="badge">FinOps</span>
+                    </div>
                 </div>
-            </div>
-            <div class="stack-category fade-up">
-                <h4>IDIOMAS</h4>
-                <div class="badges">
-                    <span class="badge">Português (Nativo)</span>
-                    <span class="badge">Inglês (Intermediário)</span>
-                    <span class="badge">Espanhol (Intermediário)</span>
+                <div class="skill-category fade-up">
+                    <h4>IDIOMAS</h4>
+                    <div class="badges">
+                        <span class="badge">Português (Nativo)</span>
+                        <span class="badge">Inglês (Intermediário)</span>
+                        <span class="badge">Espanhol (Intermediário)</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projetos -->
     <section id="projetos">
         <div class="container">
             <div class="section-title-wrapper">
@@ -703,9 +761,9 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card fade-up">
-                    <div class="image-placeholder">Em breve</div>
-                    <h3>Novo Projeto em Desenvolvimento</h3>
-                    <p>Projeto robusto sendo construído. Em breve mais detalhes.</p>
+                    <div class="image-placeholder">Em desenvolvimento</div>
+                    <h3>Novo Projeto</h3>
+                    <p>Projeto robusto em construção. Em breve mais detalhes.</p>
                     <div class="project-badges">
                         <span class="project-badge">Python</span>
                         <span class="project-badge">Em breve</span>
@@ -713,9 +771,9 @@
                     <a href="#" class="card-link">Ver código →</a>
                 </div>
                 <div class="project-card fade-up">
-                    <div class="image-placeholder">Em breve</div>
-                    <h3>Novo Projeto em Desenvolvimento</h3>
-                    <p>Projeto robusto sendo construído. Em breve mais detalhes.</p>
+                    <div class="image-placeholder">Em desenvolvimento</div>
+                    <h3>Novo Projeto</h3>
+                    <p>Projeto robusto em construção. Em breve mais detalhes.</p>
                     <div class="project-badges">
                         <span class="project-badge">C#</span>
                         <span class="project-badge">Em breve</span>
@@ -723,9 +781,9 @@
                     <a href="#" class="card-link">Ver código →</a>
                 </div>
                 <div class="project-card fade-up">
-                    <div class="image-placeholder">Em breve</div>
-                    <h3>Novo Projeto em Desenvolvimento</h3>
-                    <p>Projeto robusto sendo construído. Em breve mais detalhes.</p>
+                    <div class="image-placeholder">Em desenvolvimento</div>
+                    <h3>Novo Projeto</h3>
+                    <p>Projeto robusto em construção. Em breve mais detalhes.</p>
                     <div class="project-badges">
                         <span class="project-badge">Angular</span>
                         <span class="project-badge">Em breve</span>
@@ -736,7 +794,6 @@
         </div>
     </section>
 
-    <!-- Certificações -->
     <section id="certificacoes">
         <div class="container">
             <div class="section-title-wrapper">
@@ -745,25 +802,24 @@
             </div>
             <div class="certifications-grid">
                 <div class="cert-card fade-up">
-                    <h3>Formação DevOps Fundamentals</h3>
+                    <h3>DevOps Fundamentals</h3>
                     <p>DIO · 05/2026</p>
                     <a href="https://www.dio.me/certificate/CKU7XJ6R/share" target="_blank" class="cert-link">Ver credencial →</a>
                 </div>
                 <div class="cert-card fade-up">
-                    <h3>Formação Github Certification</h3>
+                    <h3>GitHub Certification</h3>
                     <p>DIO · 04/2026</p>
                     <a href="https://www.dio.me/certificate/JPL7S5T4/share" target="_blank" class="cert-link">Ver credencial →</a>
                 </div>
                 <div class="cert-card fade-up">
-                    <h3>Bradesco - GenAI & Dados</h3>
-                    <p>DIO · 04/2026</p>
+                    <h3>GenAI & Data</h3>
+                    <p>Bradesco / DIO · 04/2026</p>
                     <a href="https://www.dio.me/certificate/Z3COJXHR/share" target="_blank" class="cert-link">Ver credencial →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contato -->
     <section id="contato">
         <div class="container">
             <div class="section-title-wrapper">
@@ -791,7 +847,7 @@
                 </div>
                 <div class="contact-form fade-up">
                     <input type="text" id="nome" placeholder="Seu nome">
-                    <input type="email" id="email" placeholder="seu@email.com">
+                    <input type="email" id="email" placeholder="Seu e-mail">
                     <textarea id="mensagem" placeholder="Sua mensagem..."></textarea>
                     <button class="submit-btn" onclick="enviarEmail()">Enviar mensagem</button>
                 </div>
@@ -802,15 +858,12 @@
 
 <footer class="footer">
     <div class="container">
-        <p>© 2026 Murilo Pepineli — código limpo, propósito claro</p>
-        <p>Feito com Figma + Código limpo</p>
+        <p>© 2026 Murilo Pepineli · código limpo, propósito claro</p>
     </div>
 </footer>
 
 <script>
-    // Animação de scroll
     const fadeElements = document.querySelectorAll('.fade-up');
-    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -818,10 +871,8 @@
             }
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    
     fadeElements.forEach(el => observer.observe(el));
-    
-    // Header scroll effect
+
     window.addEventListener('scroll', () => {
         const header = document.getElementById('header');
         if (window.scrollY > 50) {
@@ -830,20 +881,17 @@
             header.classList.remove('scrolled');
         }
     });
-    
-    // Função do formulário
+
     function enviarEmail() {
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
         const mensagem = document.getElementById('mensagem').value;
-        
         if (!nome || !email || !mensagem) {
-            alert('Por favor, preencha todos os campos.');
+            alert('Preencha todos os campos.');
             return;
         }
-        
         const subject = `Contato do portfólio - ${nome}`;
-        const body = `Nome: ${nome}\nEmail: ${email}\n\nMensagem:\n${mensagem}`;
+        const body = `Nome: ${nome}\nE-mail: ${email}\n\nMensagem:\n${mensagem}`;
         window.location.href = `mailto:murilo.pepineli.br@outlook.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
 </script>
