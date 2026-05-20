@@ -273,7 +273,7 @@
             transform: translateY(-2px);
         }
 
-        /* Trajetória */
+        /* Trajetória - DATAS EMBAIXO */
         .trajetoria-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -315,9 +315,9 @@
         .timeline-item h4, .education-item h4 {
             font-size: 17px;
             font-weight: 700;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            display: inline-block;
+            display: block;
         }
 
         .timeline-item h4:hover, .education-item h4:hover {
@@ -328,7 +328,7 @@
         .timeline-date, .education-date {
             font-size: 0.8rem;
             color: #707070;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             display: inline-block;
         }
@@ -426,11 +426,22 @@
             background: #252525;
         }
 
-        /* Projetos e Certificações */
+        /* Projetos e Certificações - COM EXPANSÃO */
         .projects-grid, .certifications-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
+        }
+
+        .hidden-projects, .hidden-certs {
+            display: none;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .hidden-projects.show, .hidden-certs.show {
+            display: grid;
         }
 
         .project-card, .cert-card {
@@ -531,6 +542,40 @@
         .card-link:hover, .cert-link:hover {
             color: #6B1D2D;
             transform: translateX(4px);
+        }
+
+        /* Botão de expansão */
+        .expand-btn-wrapper {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .expand-btn {
+            background: transparent;
+            border: 1px solid #6B1D2D;
+            color: #F0F0F0;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .expand-btn:hover {
+            background: #6B1D2D;
+            transform: translateY(-2px);
+        }
+
+        .expand-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .expand-btn.active i {
+            transform: rotate(180deg);
         }
 
         /* Contato */
@@ -703,7 +748,7 @@
         }
 
         @media (max-width: 1024px) {
-            .skills-grid, .projects-grid, .certifications-grid {
+            .skills-grid, .projects-grid, .certifications-grid, .hidden-projects, .hidden-certs {
                 grid-template-columns: repeat(2, 1fr);
             }
             .contact-wrapper {
@@ -742,7 +787,7 @@
             .section-title {
                 font-size: 36px;
             }
-            .about-grid, .trajetoria-grid, .skills-grid, .projects-grid, .certifications-grid {
+            .about-grid, .trajetoria-grid, .skills-grid, .projects-grid, .certifications-grid, .hidden-projects, .hidden-certs {
                 grid-template-columns: 1fr;
             }
             section {
@@ -771,7 +816,7 @@
             <a href="#certificacoes">CERTIFICAÇÕES</a>
             <span class="separator">·</span>
             <a href="#contato">CONTATO</a>
-            <a href="https://raw.githubusercontent.com/pepineli/pepineli.github.io/main/CV_MuriloPepineli%20(1).pdf" class="cv-link" download>CV</a>
+            <a href="https://raw.githubusercontent.com/pepineli/pepineli.github.io/main/Pepineli_CV%20(1).pdf" class="cv-link" download>CV</a>
         </div>
     </div>
 </header>
@@ -821,9 +866,9 @@
                         <h4>Saída22.com | Estagiário</h4>
                         <div class="timeline-date">Dezembro 2023 - Fevereiro 2024</div>
                         <ul class="timeline-bullets">
-                            <li>Estágio em ambiente Cloud (GCP, Azure)</li>
-                            <li>Utilização de Terraform em FinOps</li>
-                            <li>Levantamento de recursos e grupos de usuários (IAM x rules)</li>
+                            <li>Cloud GCP e Azure, Terraform para FinOps</li>
+                            <li>Levantamento de IAM e regras</li>
+                            <li>Monitoramento de custos e otimização de recursos</li>
                         </ul>
                     </div>
                     <div class="timeline-item fade-in-up">
@@ -831,7 +876,7 @@
                         <div class="timeline-date">Fevereiro 2024 - Julho 2024</div>
                         <ul class="timeline-bullets">
                             <li>Triagem de currículos na plataforma Indeed</li>
-                            <li>Encaminhamento de candidatos e gerenciamento de formulários</li>
+                            <li>Gestão de formulários</li>
                             <li>Otimização do processo de recrutamento</li>
                         </ul>
                     </div>
@@ -839,8 +884,8 @@
                         <h4>Roveri Associados | Operador de Cobrança</h4>
                         <div class="timeline-date">Fevereiro 2025 - Dezembro 2025</div>
                         <ul class="timeline-bullets">
-                            <li>Atendimento humanizado e objetivo</li>
-                            <li>Cobrança ativa com negociação eficaz</li>
+                            <li>Atendimento humanizado e negociação eficaz</li>
+                            <li>Cobrança ativa com foco em resultados</li>
                         </ul>
                     </div>
                 </div>
@@ -855,7 +900,7 @@
                         <div class="education-date">2022 - 2024</div>
                     </div>
                     <div class="education-item fade-in-up">
-                        <h4>Bacharelado em Ciência da Computação | USCS</h4>
+                        <h4>Ciência da Computação | USCS</h4>
                         <div class="education-date">2025 - 2028 (Cursando)</div>
                     </div>
                 </div>
@@ -886,11 +931,12 @@
                     </div>
                 </div>
                 <div class="skill-category fade-in-up">
-                    <h4>CLOUD</h4>
+                    <h4>CLOUD & DEVOPS</h4>
                     <div class="badges">
-                        <span class="badge">GCP</span>
                         <span class="badge">Azure</span>
+                        <span class="badge">GCP</span>
                         <span class="badge">Terraform</span>
+                        <span class="badge">CI/CD</span>
                     </div>
                 </div>
                 <div class="skill-category fade-in-up">
@@ -905,7 +951,7 @@
                         <span class="badge">Git</span>
                         <span class="badge">Docker</span>
                         <span class="badge">Swagger</span>
-                        <span class="badge">FinOps</span>
+                        <span class="badge">Scrum</span>
                     </div>
                 </div>
                 <div class="skill-category fade-in-up">
@@ -926,11 +972,12 @@
                 <h2 class="section-title">PROJETOS</h2>
                 <div class="title-underline"></div>
             </div>
-            <div class="projects-grid">
+            <div class="projects-grid" id="projetos-grid">
+                <!-- Projetos em destaque (sempre visíveis) -->
                 <div class="project-card fade-in-up">
                     <div class="image-placeholder">Em desenvolvimento</div>
-                    <h3>Novo Projeto</h3>
-                    <p>Projeto robusto em construção. Em breve mais detalhes.</p>
+                    <h3>Em breve</h3>
+                    <p>Projeto em construção. Em breve mais detalhes.</p>
                     <div class="project-badges">
                         <span class="project-badge">Python</span>
                         <span class="project-badge">Em breve</span>
@@ -939,8 +986,8 @@
                 </div>
                 <div class="project-card fade-in-up">
                     <div class="image-placeholder">Em desenvolvimento</div>
-                    <h3>Novo Projeto</h3>
-                    <p>Projeto robusto em construção. Em breve mais detalhes.</p>
+                    <h3>Em breve</h3>
+                    <p>Projeto em construção. Em breve mais detalhes.</p>
                     <div class="project-badges">
                         <span class="project-badge">C#</span>
                         <span class="project-badge">Em breve</span>
@@ -949,14 +996,21 @@
                 </div>
                 <div class="project-card fade-in-up">
                     <div class="image-placeholder">Em desenvolvimento</div>
-                    <h3>Novo Projeto</h3>
-                    <p>Projeto robusto em construção. Em breve mais detalhes.</p>
+                    <h3>Em breve</h3>
+                    <p>Projeto em construção. Em breve mais detalhes.</p>
                     <div class="project-badges">
                         <span class="project-badge">Angular</span>
                         <span class="project-badge">Em breve</span>
                     </div>
                     <a href="#" class="card-link">Ver código →</a>
                 </div>
+            </div>
+            <div class="hidden-projects" id="hidden-projetos"></div>
+            <div class="expand-btn-wrapper">
+                <button class="expand-btn" id="expand-projetos-btn">
+                    <span>Ver outros projetos</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -967,7 +1021,7 @@
                 <h2 class="section-title">CERTIFICAÇÕES</h2>
                 <div class="title-underline"></div>
             </div>
-            <div class="certifications-grid">
+            <div class="certifications-grid" id="certs-grid">
                 <div class="cert-card fade-in-up">
                     <h3>DevOps Fundamentals</h3>
                     <p>DIO · 05/2026</p>
@@ -983,6 +1037,13 @@
                     <p>Bradesco / DIO · 04/2026</p>
                     <a href="https://www.dio.me/certificate/Z3COJXHR/share" target="_blank" class="cert-link">Ver credencial →</a>
                 </div>
+            </div>
+            <div class="hidden-certs" id="hidden-certs"></div>
+            <div class="expand-btn-wrapper">
+                <button class="expand-btn" id="expand-certs-btn">
+                    <span>Ver outras certificações</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -1018,7 +1079,7 @@
                     <textarea id="mensagem" placeholder="Sua mensagem..."></textarea>
                     <div class="btn-group">
                         <button class="submit-btn" onclick="enviarEmail()">Enviar mensagem</button>
-                        <a href="https://raw.githubusercontent.com/pepineli/pepineli.github.io/main/CV_MuriloPepineli%20(1).pdf" class="download-cv" download>Baixar CV</a>
+                        <a href="https://raw.githubusercontent.com/pepineli/pepineli.github.io/main/Pepineli_CV%20(1).pdf" class="download-cv" download>Baixar CV</a>
                     </div>
                 </div>
             </div>
@@ -1033,6 +1094,7 @@
 </footer>
 
 <script>
+    // Efeito de surgimento
     const fadeElements = document.querySelectorAll('.fade-in-up');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -1043,6 +1105,7 @@
     }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
     fadeElements.forEach(el => observer.observe(el));
 
+    // Header scroll effect
     window.addEventListener('scroll', () => {
         const header = document.getElementById('header');
         if (window.scrollY > 50) {
@@ -1052,6 +1115,7 @@
         }
     });
 
+    // Formulário
     function enviarEmail() {
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
@@ -1064,6 +1128,104 @@
         const body = `Nome: ${nome}\nE-mail: ${email}\n\nMensagem:\n${mensagem}`;
         window.location.href = `mailto:murilo.pepineli.br@outlook.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
+
+    // Expansão de projetos
+    const expandProjetosBtn = document.getElementById('expand-projetos-btn');
+    const hiddenProjetos = document.getElementById('hidden-projetos');
+    let projetosExpandido = false;
+
+    // Projetos adicionais (quando você tiver, é só adicionar aqui)
+    const projetosAdicionais = [
+        // Exemplo: 
+        // {
+        //     titulo: "Lúcio – IA Financeira",
+        //     descricao: "Agente educacional financeiro com IA generativa",
+        //     badges: ["Python", "OpenAI", "Gradio"],
+        //     link: "https://github.com/pepineli/Agente-Lucio",
+        //     imagem: "https://pepineli.github.io/images/lucio.jpg"
+        // }
+    ];
+
+    function renderProjetosAdicionais() {
+        if (projetosAdicionais.length === 0) {
+            hiddenProjetos.innerHTML = `
+                <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #707070;">
+                    Novos projetos em breve.
+                </div>
+            `;
+            return;
+        }
+        hiddenProjetos.innerHTML = projetosAdicionais.map(proj => `
+            <div class="project-card">
+                <div class="image-placeholder">
+                    ${proj.imagem ? `<img src="${proj.imagem}" alt="${proj.titulo}" style="width:100%;height:100%;object-fit:cover;border-radius:14px;">` : 'Em desenvolvimento'}
+                </div>
+                <h3>${proj.titulo}</h3>
+                <p>${proj.descricao}</p>
+                <div class="project-badges">
+                    ${proj.badges.map(b => `<span class="project-badge">${b}</span>`).join('')}
+                </div>
+                <a href="${proj.link}" class="card-link" target="_blank">Ver código →</a>
+            </div>
+        `).join('');
+    }
+
+    expandProjetosBtn.addEventListener('click', () => {
+        if (!projetosExpandido) {
+            renderProjetosAdicionais();
+            hiddenProjetos.classList.add('show');
+            expandProjetosBtn.classList.add('active');
+            expandProjetosBtn.querySelector('span').textContent = 'Ver menos projetos';
+            projetosExpandido = true;
+        } else {
+            hiddenProjetos.classList.remove('show');
+            expandProjetosBtn.classList.remove('active');
+            expandProjetosBtn.querySelector('span').textContent = 'Ver outros projetos';
+            projetosExpandido = false;
+        }
+    });
+
+    // Expansão de certificações
+    const expandCertsBtn = document.getElementById('expand-certs-btn');
+    const hiddenCerts = document.getElementById('hidden-certs');
+    let certsExpandido = false;
+
+    const certificacoesAdicionais = [
+        // Adicione mais certificações aqui quando quiser
+    ];
+
+    function renderCertsAdicionais() {
+        if (certificacoesAdicionais.length === 0) {
+            hiddenCerts.innerHTML = `
+                <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #707070;">
+                    Mais certificações em breve.
+                </div>
+            `;
+            return;
+        }
+        hiddenCerts.innerHTML = certificacoesAdicionais.map(cert => `
+            <div class="cert-card">
+                <h3>${cert.titulo}</h3>
+                <p>${cert.emissor} · ${cert.data}</p>
+                <a href="${cert.link}" class="cert-link" target="_blank">Ver credencial →</a>
+            </div>
+        `).join('');
+    }
+
+    expandCertsBtn.addEventListener('click', () => {
+        if (!certsExpandido) {
+            renderCertsAdicionais();
+            hiddenCerts.classList.add('show');
+            expandCertsBtn.classList.add('active');
+            expandCertsBtn.querySelector('span').textContent = 'Ver menos certificações';
+            certsExpandido = true;
+        } else {
+            hiddenCerts.classList.remove('show');
+            expandCertsBtn.classList.remove('active');
+            expandCertsBtn.querySelector('span').textContent = 'Ver outras certificações';
+            certsExpandido = false;
+        }
+    });
 </script>
 
 </body>
