@@ -208,7 +208,7 @@
             transform: translateY(-4px);
         }
 
-        /* Sobre */
+        /* Sobre - APENAS CLAREAMENTO, sem movimento */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -228,8 +228,8 @@
         }
 
         .about-text:hover {
-            transform: translateY(-4px);
-            background: rgba(107, 29, 45, 0.04);
+            background: rgba(107, 29, 45, 0.06);
+            color: #E8E8E8;
         }
 
         .objective-box {
@@ -243,9 +243,8 @@
         }
 
         .objective-box:hover {
-            background: rgba(26, 10, 16, 0.8);
+            background: rgba(26, 10, 16, 0.7);
             border-left-width: 4px;
-            transform: translateY(-4px);
         }
 
         .objective-label {
@@ -260,7 +259,7 @@
         }
 
         .objective-label:hover {
-            transform: translateY(-2px);
+            color: #9B3D4D;
         }
 
         .objective-box p {
@@ -270,10 +269,10 @@
         }
 
         .objective-box p:hover {
-            transform: translateY(-2px);
+            color: #E8E8E8;
         }
 
-        /* Trajetória - DATAS EMBAIXO */
+        /* Trajetória */
         .trajetoria-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -578,7 +577,7 @@
             transform: rotate(180deg);
         }
 
-        /* Contato */
+        /* Contato - formulário funcional */
         .contact-wrapper {
             display: flex;
             gap: 48px;
@@ -973,7 +972,6 @@
                 <div class="title-underline"></div>
             </div>
             <div class="projects-grid" id="projetos-grid">
-                <!-- Projetos em destaque (sempre visíveis) -->
                 <div class="project-card fade-in-up">
                     <div class="image-placeholder">Em desenvolvimento</div>
                     <h3>Em breve</h3>
@@ -1078,7 +1076,7 @@
                     <input type="email" id="email" placeholder="Seu e-mail">
                     <textarea id="mensagem" placeholder="Sua mensagem..."></textarea>
                     <div class="btn-group">
-                        <button class="submit-btn" onclick="enviarEmail()">Enviar mensagem</button>
+                        <button class="submit-btn" id="submitFormBtn">Enviar mensagem</button>
                         <a href="https://raw.githubusercontent.com/pepineli/pepineli.github.io/main/Pepineli_CV%20(1).pdf" class="download-cv" download>Baixar CV</a>
                     </div>
                 </div>
@@ -1115,36 +1113,29 @@
         }
     });
 
-    // Formulário
-    function enviarEmail() {
+    // Formulário de contato FUNCIONAL
+    document.getElementById('submitFormBtn').addEventListener('click', function() {
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
         const mensagem = document.getElementById('mensagem').value;
+        
         if (!nome || !email || !mensagem) {
-            alert('Preencha todos os campos.');
+            alert('Por favor, preencha todos os campos.');
             return;
         }
+        
         const subject = `Contato do portfólio - ${nome}`;
         const body = `Nome: ${nome}\nE-mail: ${email}\n\nMensagem:\n${mensagem}`;
+        
         window.location.href = `mailto:murilo.pepineli.br@outlook.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    }
+    });
 
     // Expansão de projetos
     const expandProjetosBtn = document.getElementById('expand-projetos-btn');
     const hiddenProjetos = document.getElementById('hidden-projetos');
     let projetosExpandido = false;
 
-    // Projetos adicionais (quando você tiver, é só adicionar aqui)
-    const projetosAdicionais = [
-        // Exemplo: 
-        // {
-        //     titulo: "Lúcio – IA Financeira",
-        //     descricao: "Agente educacional financeiro com IA generativa",
-        //     badges: ["Python", "OpenAI", "Gradio"],
-        //     link: "https://github.com/pepineli/Agente-Lucio",
-        //     imagem: "https://pepineli.github.io/images/lucio.jpg"
-        // }
-    ];
+    const projetosAdicionais = [];
 
     function renderProjetosAdicionais() {
         if (projetosAdicionais.length === 0) {
@@ -1190,9 +1181,7 @@
     const hiddenCerts = document.getElementById('hidden-certs');
     let certsExpandido = false;
 
-    const certificacoesAdicionais = [
-        // Adicione mais certificações aqui quando quiser
-    ];
+    const certificacoesAdicionais = [];
 
     function renderCertsAdicionais() {
         if (certificacoesAdicionais.length === 0) {
